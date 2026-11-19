@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The World Today — Thursday 19 November 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1024px; height: 1024px; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f1e3;
+    color: #1a1a1a;
+  }
+  .page {
+    width: 1024px; height: 1024px;
+    padding: 16px 28px 10px 28px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .page > * { flex: none; }
+  /* ---------- masthead ---------- */
+  header { text-align: center; height: 118px; }
+  .rule-heavy { border-top: 7px solid #1a1a1a; }
+  .rule-thin  { border-top: 2px solid #1a1a1a; margin-top: 3px; }
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 60px; font-weight: 900; letter-spacing: 1px;
+    line-height: 1.02; padding: 3px 0 2px 0;
+  }
+  .dateline {
+    background: #b3202c; color: #fff;
+    font-size: 28px; font-weight: 800; letter-spacing: 3px;
+    padding: 3px 0 4px 0; margin-top: 3px;
+  }
+  .tagline {
+    font-size: 13px; font-weight: 700; letter-spacing: 1.8px;
+    padding-top: 4px; color: #333;
+  }
+  /* ---------- panels ---------- */
+  .panel {
+    background: #fffdf4;
+    border: 2.5px solid #1a1a1a;
+    display: flex; overflow: hidden;
+  }
+  .kicker {
+    font-size: 13px; font-weight: 800; letter-spacing: 2px;
+    color: #b3202c;
+  }
+  .kicker.navy { color: #173f63; }
+  h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 900; line-height: 1.05;
+  }
+  .sub { color: #262626; line-height: 1.25; }
+  .art { flex: none; }
+  .art svg { display: block; }
+  /* lead row */
+  .row { display: flex; gap: 6px; }
+  .row .panel { flex: 1; }
+  .lead { height: 204px; }
+  .lead .txt { padding: 9px 13px 7px 12px; }
+  .lead h2 { font-size: 26px; margin: 3px 0 4px 0; }
+  .lead .sub { font-size: 15px; }
+  /* row A */
+  .row-a { height: 162px; }
+  .row-a .txt { padding: 8px 13px 6px 12px; }
+  .row-a h2 { font-size: 22.5px; margin: 3px 0 4px 0; }
+  .row-a .sub { font-size: 14.5px; }
+  /* row B */
+  .row-b { height: 140px; }
+  .row-b .txt { padding: 7px 13px 5px 12px; }
+  .row-b h2 { font-size: 21.5px; margin: 3px 0 4px 0; }
+  .row-b .sub { font-size: 14px; }
+  /* ---------- world map ---------- */
+  .map-panel { height: 122px; }
+  .map-panel .art { padding: 5px 0 5px 8px; }
+  .map-legend { padding: 7px 12px 5px 8px; flex: 1; }
+  .map-legend h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px; font-weight: 900; letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+  .map-legend .cols { display: flex; gap: 12px; }
+  .map-legend ul { list-style: none; flex: 1; }
+  .map-legend li {
+    font-size: 12.5px; line-height: 1.3; color: #262626;
+    padding-left: 0; white-space: nowrap;
+  }
+  .map-legend li b { color: #b3202c; }
+  /* ---------- numbers strip ---------- */
+  .strip { height: 46px; display: flex; gap: 6px; }
+  .strip .cell {
+    flex: 1; background: #173f63; color: #fff;
+    display: flex; align-items: center; gap: 10px;
+    padding: 5px 12px;
+  }
+  .strip .cell.alt { background: #b3202c; }
+  .strip .num {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px; font-weight: 900; white-space: nowrap;
+  }
+  .strip p { font-size: 12.5px; line-height: 1.15; color: #f2ede0; }
+  /* ---------- short news list ---------- */
+  .shortlist { height: 152px; padding: 6px 12px 4px 12px; display: block; }
+  .shortlist h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px; font-weight: 900; letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+  .shortlist .cols { display: flex; gap: 18px; }
+  .shortlist ul { list-style: none; flex: 1; }
+  .shortlist li {
+    font-size: 12.5px; line-height: 1.24; color: #262626;
+    white-space: nowrap; overflow: hidden;
+  }
+  .shortlist li b { color: #b3202c; }
+  footer {
+    text-align: center; font-size: 12.5px; letter-spacing: 1.5px;
+    color: #444; font-weight: 700; height: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="rule-heavy"></div><div class="rule-thin"></div>
+    <h1>THE WORLD TODAY</h1>
+    <div class="dateline">THURSDAY, 19 NOVEMBER 2026</div>
+    <div class="tagline">THE DAY'S WORLD NEWS ON ONE PAGE &nbsp;•&nbsp; THE GULF &nbsp;•&nbsp; SHENZHEN &nbsp;•&nbsp; CLIMATE &nbsp;•&nbsp; SPACE &nbsp;•&nbsp; WASHINGTON</div>
+  </header>
+
+  <div class="row lead">
+    <!-- LEAD 1 : US-IRAN / KUWAIT -->
+    <section class="panel">
+      <div class="art">
+        <svg width="230" height="204" viewBox="0 0 246 198">
+          <defs>
+            <pattern id="stars" width="18" height="18" patternUnits="userSpaceOnUse">
+              <circle cx="4" cy="5" r="1.2" fill="#f2ede0"/><circle cx="13" cy="13" r="0.9" fill="#f2ede0"/>
+            </pattern>
+          </defs>
+          <rect x="0" y="0" width="246" height="198" fill="#16222e"/>
+          <rect x="0" y="0" width="246" height="198" fill="url(#stars)" opacity="0.7"/>
+          <circle cx="212" cy="30" r="16" fill="#f2b134"/>
+          <!-- desert base -->
+          <path d="M0,150 L60,138 L120,146 L190,136 L246,144 L246,198 L0,198 Z" fill="#8a7f5f"/>
+          <path d="M0,168 L246,168 L246,198 L0,198 Z" fill="#6b5f42"/>
+          <!-- radar tower -->
+          <rect x="52" y="96" width="10" height="58" fill="#37474f"/>
+          <rect x="44" y="88" width="26" height="10" fill="#ece7da"/>
+          <circle cx="57" cy="76" r="14" fill="none" stroke="#f2ede0" stroke-width="3"/>
+          <path d="M57,76 L70,63" stroke="#f2b134" stroke-width="3"/>
+          <!-- hangar -->
+          <path d="M120,154 L120,118 Q164,98 208,118 L208,154 Z" fill="#455a64"/>
+          <rect x="140" y="132" width="48" height="22" fill="#263238"/>
+          <!-- drones -->
+          <g fill="#f2ede0">
+            <path d="M150,52 l14,5 -14,5 -3,-5z"/><rect x="138" y="55" width="8" height="3"/>
+            <path d="M196,36 l14,5 -14,5 -3,-5z"/><rect x="184" y="39" width="8" height="3"/>
+            <path d="M104,30 l14,5 -14,5 -3,-5z"/><rect x="92" y="33" width="8" height="3"/>
+          </g>
+          <!-- interceptor trails -->
+          <path d="M70,150 q10,-40 34,-58" stroke="#e2571e" stroke-width="4" fill="none"/>
+          <path d="M180,150 q-6,-34 -26,-52" stroke="#e2571e" stroke-width="4" fill="none"/>
+          <circle cx="104" cy="92" r="5" fill="#e2571e"/>
+          <circle cx="154" cy="98" r="5" fill="#e2571e"/>
+        </svg>
+      </div>
+      <div class="txt">
+        <div class="kicker">MIDDLE EAST</div>
+        <h2>IRAN HITS U.S. BASE IN KUWAIT AS WAR WIDENS</h2>
+        <p class="sub">Tehran says it hit U.S. facilities at Ali Al Salem base. Bahrain foiled Iranian attacks for a third time in a week.</p>
+      </div>
+    </section>
+    <!-- LEAD 2 : SHENZHEN -->
+    <section class="panel">
+      <div class="art">
+        <svg width="230" height="204" viewBox="0 0 246 198">
+          <rect x="0" y="0" width="246" height="198" fill="#dcead9"/>
+          <circle cx="36" cy="30" r="18" fill="#f2b134"/>
+          <!-- skyline -->
+          <g fill="#37474f">
+            <rect x="8" y="90" width="26" height="108"/>
+            <rect x="40" y="66" width="30" height="132"/>
+            <rect x="76" y="100" width="24" height="98"/>
+            <rect x="106" y="52" width="34" height="146"/>
+            <rect x="146" y="82" width="28" height="116"/>
+            <rect x="180" y="96" width="26" height="102"/>
+            <rect x="212" y="70" width="26" height="128"/>
+          </g>
+          <g fill="#f2b134">
+            <rect x="46" y="72" width="18" height="6"/><rect x="46" y="84" width="18" height="6"/>
+            <rect x="112" y="58" width="22" height="6"/><rect x="112" y="70" width="22" height="6"/>
+            <rect x="218" y="76" width="14" height="6"/><rect x="218" y="88" width="14" height="6"/>
+          </g>
+          <!-- three flags -->
+          <g>
+            <rect x="16" y="150" width="4" height="48" fill="#263238"/>
+            <rect x="20" y="150" width="52" height="26" fill="#b3202c"/>
+            <rect x="20" y="150" width="52" height="4" fill="#fff"/><rect x="20" y="158" width="52" height="4" fill="#fff"/><rect x="20" y="166" width="52" height="4" fill="#fff"/>
+            <rect x="20" y="150" width="22" height="13" fill="#173f63"/>
+            <rect x="94" y="150" width="4" height="48" fill="#263238"/>
+            <rect x="98" y="150" width="52" height="26" fill="#de2910"/>
+            <path d="M106,156 l2,4 4,0 -3,3 1,4 -4,-3 -4,3 1,-4 -3,-3 4,0z" fill="#ffde00"/>
+            <rect x="172" y="150" width="4" height="48" fill="#263238"/>
+            <rect x="176" y="150" width="52" height="26" fill="#fff"/>
+            <rect x="176" y="150" width="52" height="9" fill="#fff"/><rect x="176" y="159" width="52" height="8" fill="#0039a6"/><rect x="176" y="167" width="52" height="9" fill="#d52b1e"/>
+          </g>
+        </svg>
+      </div>
+      <div class="txt">
+        <div class="kicker navy">CHINA — A FIRST</div>
+        <h2>TRUMP, XI AND PUTIN MEET IN SHENZHEN TODAY</h2>
+        <p class="sub">The first-ever three-way meeting of the three leaders — nuclear arms at the centre; Ukraine, Iran, trade and AI on the table.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="row row-a">
+    <!-- GTA VI -->
+    <section class="panel">
+      <div class="art">
+        <svg width="180" height="162" viewBox="0 0 180 172">
+          <rect x="0" y="0" width="180" height="172" fill="#1b1030"/>
+          <circle cx="150" cy="26" r="14" fill="#f2b134"/>
+          <g fill="#2a1b4a">
+            <rect x="6" y="80" width="24" height="92"/><rect x="36" y="58" width="26" height="114"/>
+            <rect x="68" y="88" width="22" height="84"/><rect x="96" y="66" width="28" height="106"/>
+            <rect x="130" y="92" width="22" height="80"/><rect x="156" y="76" width="20" height="96"/>
+          </g>
+          <g fill="#ff2e88">
+            <rect x="40" y="64" width="18" height="4"/><rect x="100" y="72" width="20" height="4"/>
+          </g>
+          <g fill="#f2b134">
+            <rect x="10" y="86" width="16" height="4"/><rect x="72" y="94" width="14" height="4"/>
+          </g>
+          <!-- palm -->
+          <path d="M142,172 q4,-34 -6,-52" stroke="#0f6b3a" stroke-width="5" fill="none"/>
+          <path d="M136,120 q-18,-10 -30,-2 q14,8 30,2z" fill="#2e9e5b"/>
+          <path d="M136,120 q2,-18 16,-24 q-2,14 -16,24z" fill="#2e9e5b"/>
+          <path d="M136,120 q16,-8 28,2 q-14,6 -28,-2z" fill="#2e9e5b"/>
+          <text x="90" y="140" font-family="Georgia, serif" font-size="24" font-weight="900" fill="#ff2e88" text-anchor="middle">VICE CITY</text>
+          <text x="90" y="162" font-family="Arial, sans-serif" font-size="12" font-weight="800" fill="#f2ede0" text-anchor="middle" letter-spacing="2">GTA VI IS HERE</text>
+        </svg>
+      </div>
+      <div class="txt">
+        <div class="kicker">CULTURE</div>
+        <h2>GTA VI ROLLS OUT AROUND THE WORLD</h2>
+        <p class="sub">Rockstar's blockbuster unlocks at midnight in each market, starting in <b>New Zealand</b>. Pre-orders near <b>$1.5bn</b>; critics give it 99/100.</p>
+      </div>
+    </section>
+    <!-- COP31 -->
+    <section class="panel">
+      <div class="art">
+        <svg width="180" height="162" viewBox="0 0 180 172">
+          <rect x="0" y="0" width="180" height="172" fill="#dcead9"/>
+          <circle cx="90" cy="66" r="44" fill="#2e7d4f"/>
+          <path d="M90,32 q26,8 23,31 q-20,3 -29,-11 q-4,-12 6,-20z" fill="#7fbf5f"/>
+          <path d="M66,88 q16,-12 34,-6 q-6,16 -22,16 q-10,-2 -12,-10z" fill="#7fbf5f"/>
+          <path d="M90,98 q2,-23 17,-37" stroke="#dcead9" stroke-width="4" fill="none"/>
+          <rect x="14" y="122" width="152" height="30" fill="#173f63"/>
+          <text x="90" y="142" font-family="Arial, sans-serif" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">COP31 • ANTALYA</text>
+          <text x="90" y="166" font-family="Arial, sans-serif" font-size="12" font-weight="800" fill="#b3202c" text-anchor="middle">21 ISSUES STILL OPEN</text>
+        </svg>
+      </div>
+      <div class="txt">
+        <div class="kicker navy">CLIMATE — COP31, TÜRKIYE</div>
+        <h2>CLIMATE TALKS HIT CRUNCH DAY</h2>
+        <p class="sub">New drafts are due early today with 21 issues open — who pays, fossil fuels, 1.5°C. OPEC backs oil; 75 nations back 35×35.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="row row-b">
+    <!-- VOYAGER -->
+    <section class="panel">
+      <div class="art">
+        <svg width="160" height="140" viewBox="0 0 160 142">
+          <rect x="0" y="0" width="160" height="142" fill="#0d1526"/>
+          <g fill="#f2ede0">
+            <circle cx="18" cy="18" r="1.6"/><circle cx="48" cy="10" r="1.2"/><circle cx="86" cy="22" r="1.6"/>
+            <circle cx="130" cy="12" r="1.2"/><circle cx="146" cy="44" r="1.6"/><circle cx="26" cy="52" r="1.2"/>
+            <circle cx="66" cy="40" r="1.2"/><circle cx="112" cy="58" r="1.6"/><circle cx="152" cy="96" r="1.2"/>
+          </g>
+          <circle cx="26" cy="112" r="18" fill="#f2b134"/>
+          <circle cx="26" cy="112" r="24" fill="none" stroke="#f2b134" stroke-width="2" opacity="0.5"/>
+          <!-- probe -->
+          <g transform="translate(88,62)">
+            <path d="M0,0 L34,-18 L44,-8 L10,10 Z" fill="#c8a24a"/>
+            <rect x="6" y="-2" width="30" height="10" fill="#8a7a3a"/>
+            <path d="M36,-2 L52,-12 L58,-4 L40,6 Z" fill="#d8c08a"/>
+            <path d="M0,0 L-14,14" stroke="#c8a24a" stroke-width="3"/>
+            <circle cx="-16" cy="16" r="3" fill="#f2ede0"/>
+          </g>
+          <path d="M44,110 q30,-24 60,-40" stroke="#f2b134" stroke-width="2" stroke-dasharray="5 5" fill="none" opacity="0.8"/>
+          <text x="80" y="134" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#f2ede0" text-anchor="middle">ONE LIGHT-DAY OUT</text>
+        </svg>
+      </div>
+      <div class="txt">
+        <div class="kicker navy">SPACE — A FIRST FOR HUMANITY</div>
+        <h2>VOYAGER 1: ONE LIGHT-DAY FROM EARTH</h2>
+        <p class="sub">NASA confirms today the 49-year-old probe is 16bn miles out — a signal takes a full day to reach it.</p>
+      </div>
+    </section>
+    <!-- JEFFRIES -->
+    <section class="panel">
+      <div class="art">
+        <svg width="160" height="140" viewBox="0 0 160 142">
+          <rect x="0" y="0" width="160" height="142" fill="#dce4ec"/>
+          <!-- capitol -->
+          <path d="M10,142 L10,104 L150,104 L150,142 Z" fill="#ece7da"/>
+          <path d="M60,104 Q60,62 80,54 Q100,62 100,104 Z" fill="#fffdf4"/>
+          <rect x="78" y="34" width="4" height="22" fill="#37474f"/>
+          <circle cx="80" cy="32" r="4" fill="#37474f"/>
+          <g fill="#173f63">
+            <rect x="22" y="112" width="10" height="30"/><rect x="40" y="112" width="10" height="30"/>
+            <rect x="110" y="112" width="10" height="30"/><rect x="128" y="112" width="10" height="30"/>
+          </g>
+          <rect x="10" y="100" width="140" height="6" fill="#b3202c"/>
+          <!-- stars -->
+          <g fill="#b3202c">
+            <circle cx="80" cy="14" r="2.4"/><circle cx="60" cy="20" r="2"/><circle cx="100" cy="20" r="2"/>
+          </g>
+        </svg>
+      </div>
+      <div class="txt">
+        <div class="kicker">WASHINGTON</div>
+        <h2>JEFFRIES NOMINATED FOR SPEAKER</h2>
+        <p class="sub">House Democrats back Hakeem Jeffries 251–11, on course to be the first Black Speaker. Floor vote: 3 January.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- WORLD MAP -->
+  <section class="panel map-panel">
+    <div class="art">
+      <svg width="480" height="112" viewBox="0 0 600 120">
+        <defs>
+          <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse">
+            <circle cx="3.5" cy="3.5" r="1.7" fill="#173f63"/>
+          </pattern>
+          <clipPath id="land">
+            <path d="M28,14 L56,6 L96,4 L150,10 L168,26 L144,44 L118,54 L94,60 L68,54 L44,44 L24,34 L28,22 Z"/>
+            <path d="M108,74 L134,68 L164,84 L150,112 L128,128 L114,104 Z"/>
+            <path d="M288,54 L330,48 L360,58 L356,84 L330,108 L304,94 L284,70 Z"/>
+            <path d="M284,24 L310,14 L336,20 L330,34 L304,40 L288,34 Z"/>
+            <path d="M340,14 L420,6 L500,14 L560,24 L540,54 L480,58 L430,64 L400,54 L360,44 L350,28 Z"/>
+            <path d="M498,94 L546,88 L562,104 L520,114 L494,106 Z"/>
+          </clipPath>
+        </defs>
+        <rect x="0" y="0" width="600" height="120" fill="#e8eef2"/>
+        <rect x="0" y="0" width="600" height="120" fill="url(#dots)" clip-path="url(#land)"/>
+        <g fill="none" stroke="#9fb3c0" stroke-width="1" opacity="0.7">
+          <path d="M0,30 H600 M0,60 H600 M0,90 H600"/>
+          <path d="M100,0 V120 M200,0 V120 M300,0 V120 M400,0 V120 M500,0 V120"/>
+        </g>
+        <!-- numbered dots -->
+        <g font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#fff" text-anchor="middle">
+          <g><circle cx="488" cy="44" r="9" fill="#b3202c"/><text x="488" y="48">1</text></g>
+          <g><circle cx="378" cy="40" r="9" fill="#b3202c"/><text x="378" y="44">2</text></g>
+          <g><circle cx="350" cy="35" r="9" fill="#b3202c"/><text x="350" y="39">3</text></g>
+          <g><circle cx="430" cy="52" r="9" fill="#b3202c"/><text x="430" y="56">4</text></g>
+          <g><circle cx="172" cy="34" r="9" fill="#b3202c"/><text x="172" y="38">5</text></g>
+          <g><circle cx="50" cy="16" r="9" fill="#b3202c"/><text x="50" y="20">6</text></g>
+          <g><circle cx="303" cy="27" r="9" fill="#b3202c"/><text x="303" y="31">7</text></g>
+          <g><circle cx="548" cy="84" r="9" fill="#b3202c"/><text x="548" y="88">8</text></g>
+        </g>
+      </svg>
+    </div>
+    <div class="map-legend">
+      <h3>WHERE THE NEWS IS</h3>
+      <div class="cols">
+        <ul>
+          <li><b>1</b> Shenzhen — three leaders meet</li>
+          <li><b>2</b> Kuwait — Iran hits U.S. base</li>
+          <li><b>3</b> Antalya — COP31 crunch day</li>
+          <li><b>4</b> India's east coast — Cyclone Akvan</li>
+        </ul>
+        <ul>
+          <li><b>5</b> Washington — Jeffries nominated</li>
+          <li><b>6</b> Alaska — Democrats win Senate seat</li>
+          <li><b>7</b> Paris — strikes swell</li>
+          <li><b>8</b> Canberra — sanctions on settlers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BY THE NUMBERS -->
+  <div class="strip">
+    <div class="cell"><div class="num">3</div><p>U.S. aircraft carriers now in the Middle East</p></div>
+    <div class="cell alt"><div class="num">$1.5BN</div><p>GTA VI pre-orders before launch day</p></div>
+    <div class="cell"><div class="num">16BN</div><p>miles — Voyager 1's distance from Earth</p></div>
+    <div class="cell alt"><div class="num">75</div><p>nations backing the 35×35 power pledge</p></div>
+  </div>
+
+  <!-- SHORT NEWS LIST -->
+  <section class="panel shortlist">
+    <h3>AND IN BRIEF</h3>
+    <div class="cols">
+      <ul>
+        <li><b>•</b> EU proposes a €45bn Ukraine loan, repaid once Russia pays reparations</li>
+        <li><b>•</b> Liu Yunping, first Asian American to chair the House Democratic Caucus</li>
+        <li><b>•</b> Nvidia stops H-series chip shipments to mainland China</li>
+        <li><b>•</b> Pew: Islam on track to be the world's largest religion by 2035</li>
+        <li><b>•</b> Canada's Carney recalibrates China ties, seeks the right U.S. deal</li>
+        <li><b>•</b> Somalia accuses the UAE of secretly building military bases</li>
+        <li><b>•</b> Scientists may have solved Earth's "missing" billion years</li>
+        <li><b>•</b> Modi meets the Prince and Princess of Wales in London</li>
+      </ul>
+      <ul>
+        <li><b>•</b> India and Japan review defence ties in Tokyo</li>
+        <li><b>•</b> LPG tanker that sank off Bulgaria was hit by projectiles</li>
+        <li><b>•</b> U.S. senators warn AI cyber threats are outpacing defences</li>
+        <li><b>•</b> Spain hit by a general strike; police clash with protesters</li>
+        <li><b>•</b> Democrats win Alaska's Senate seat — a 56–44 majority</li>
+        <li><b>•</b> Saudi Arabia: danger has passed in three southern cities</li>
+        <li><b>•</b> England's Ben Duckett hits 133 in the third ODI in Australia</li>
+        <li><b>•</b> French protests swell as unions join the strikes</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>COMPILED FROM THE DAY'S WIRE REPORTS &nbsp;•&nbsp; THURSDAY 19 NOVEMBER 2026 &nbsp;•&nbsp; ONE PAGE, ONE DAY</footer>
+
+</div>
+</body>
+</html>
